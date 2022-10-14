@@ -4,11 +4,11 @@
 - print useful messages for users
 
 ## single steps:
-- [ ] print hello/intro statement
-- [ ] print board
-- [ ] player 1 starts by placing his token on the board
-- [ ] save state of board
-- [ ] print board again
+- [x] print hello/intro statement
+- [x] print board
+- [x] player 1 starts by placing his token on the board
+- [x] save state of board
+- [x] print board again
 - [ ] now its player 2's turn:
 - [ ] place token
 - [ ] check if space is already taken
