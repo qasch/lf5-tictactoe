@@ -22,7 +22,22 @@ def print_board():
           + board[6] + ' | ' + board[7] + ' | ' + board[8] + '\n')
 
 
+def check_if_spot_is_occupied():
+   if board[position - 1] != '-':
+       print("Spot is already taken, please choose another one.")
+        # new input
+        return True
+
+def place_token_on_board():
+    # translate user input to list index
+    # and update board / save state
+    board[position - 1] = 'X'
+
+
+# board = ["-", "-", "X", "-", "-", "-", "-", "-", "-"]
+
 def check_user_input():
+    # TODO: all checks implemented?
     # use global variable postition so that we can
     # change its value from inside the function
     global position
@@ -30,9 +45,8 @@ def check_user_input():
         position = int(position)
         # check if position is between 1 (inclusive) and 10 (exclusive)
         if position in range(1, 10):
-            # translate user input to list index
-            # and update board / save state
-            board[position - 1] = 'X'
+            check_if_spot_is_occupied()
+            place_token_on_board()
         else:
             print("Please enter a number between 1 and 9.")
     else:
@@ -49,9 +63,10 @@ print_welcome()
 print_board()
 # player 1 starts by placing his token on the board
 # player 1 places the 'X' symbol
-get_user_input()
-check_user_input()
-print_board()
+while ________:
+    get_user_input()
+    check_user_input()
+    print_board()
 
 # now its player 2's turn:
 # place token
